@@ -38,13 +38,33 @@ void loop() {
     analogWrite(10, 204);
     analogWrite(9, 255);
     delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 255);
-    analogWrite(10, 204);
-    analogWrite(9, 102);
+    analogWrite(11, 1);
+    analogWrite(10, 2);
+    analogWrite(9, 199);
     delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 255);
+    analogWrite(11, 220);
+    analogWrite(10, 105);
+    analogWrite(9, 166);
+    delay(1000); // wait 1000 milliseconds
+    analogWrite(11, 5);
+    analogWrite(10, 255);
+    analogWrite(9, 40);
+    delay(1000); // wait 1000 milliseconds
+    analogWrite(11, 10);
+    analogWrite(10, 50);
+    analogWrite(9, 255);
+    delay(1000); // wait 1000 milliseconds
+    analogWrite(11, 0);
     analogWrite(10, 0);
     analogWrite(9, 0);
-  
+    delay(1000); // wait 1000 milliseconds
+    analogWrite(11, 1);
+    analogWrite(10, 5);
+    analogWrite(9, 20);
+    delay(1000); // wait 1000 milliseconds
+    analogWrite(11, 230);
+    analogWrite(10, 115);
+    analogWrite(9, 176);
+  }
 
 }
