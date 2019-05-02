@@ -32,8 +32,8 @@ void loop() {
     analogWrite(9, 255);
     delay(1000); // wait 1000 milliseconds
     analogWrite(11, 255);
-    analogWrite(10, 204);
-    analogWrite(9, 102);
+    analogWrite(10, 128);
+    analogWrite(9, 0);
     delay(1000); // wait 1000 milliseconds
     analogWrite(11, 51);
     analogWrite(10, 204);
