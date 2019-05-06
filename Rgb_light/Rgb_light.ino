@@ -5,67 +5,32 @@ AJ Hudson
 Joe Hill
 
 
-This program is going to make an RGB light change into four different 
-colors in different patterns
+this will allouw the light to chnage with how much light is over the sensor
 
 we gotton the code from this youtuber 
 Autodesk Tinkercad and they also used blockes
 
 */
 
-int counter;
 
-void setup() {
-  pinMode(11, OUTPUT);
- pinMode(10, OUTPUT);
- pinMode(9, OUTPUT);
+
+int sensorValue = 0;
+
+void setup()
+{
+    pinMode(A0, INPUT);
+  pinMode(9, OUTPUT);
+  Serial.begin(9600);
 }
 
-void loop() {
-  for (counter = 0, counter < 10;  ++counter;)  {
-    analogWrite(11, 255);
-    analogWrite(10, 0);
-    analogWrite(9, 0);
-    delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 255);
-    analogWrite(10, 255);
-    analogWrite(9, 255);
-    delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 255);
-    analogWrite(10, 128);
-    analogWrite(9, 0);
-    delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 51);
-    analogWrite(10, 204);
-    analogWrite(9, 255);
-    delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 1);
-    analogWrite(10, 2);
-    analogWrite(9, 199);
-    delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 220);
-    analogWrite(10, 105);
-    analogWrite(9, 166);
-    delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 5);
-    analogWrite(10, 255);
-    analogWrite(9, 40);
-    delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 10);
-    analogWrite(10, 50);
-    analogWrite(9, 255);
-    delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 0);
-    analogWrite(10, 0);
-    analogWrite(9, 0);
-    delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 1);
-    analogWrite(10, 5);
-    analogWrite(9, 20);
-    delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 230);
-    analogWrite(10, 115);
-    analogWrite(9, 176);
-  }
+void loop()
+{
+   // read the value from the sensor
+  sensorValue = analogRead(A0);
+  // print the sensor reading so you know its range
+  Serial.println(sensorValue);
+    // map the sensor reading to a range for the LED
+  analogWrite(9, map(sensorValue, 0, 1023, 0, 255));
+
 
 }
