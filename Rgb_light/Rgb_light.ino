@@ -22,7 +22,7 @@ void setup() {
 }
 
 void loop() {
-  for (counter = 0, counter < 10;  ++counter;)  {
+    for (counter = 0, counter < 20;  ++counter;)  {
     analogWrite(11, 255);
     analogWrite(10, 0);
     analogWrite(9, 0);
@@ -32,8 +32,8 @@ void loop() {
     analogWrite(9, 255);
     delay(1000); // wait 1000 milliseconds
     analogWrite(11, 255);
-    analogWrite(10, 204);
-    analogWrite(9, 102);
+    analogWrite(10, 128);
+    analogWrite(9, 0);
     delay(1000); // wait 1000 milliseconds
     analogWrite(11, 51);
     analogWrite(10, 204);
@@ -44,20 +44,16 @@ void loop() {
     analogWrite(9, 199);
     delay(1000); // wait 1000 milliseconds
     analogWrite(11, 220);
-    analogWrite(10, 105);
-    analogWrite(9, 166);
+    analogWrite(10, 140);
+    analogWrite(9, 120);
     delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 5);
+    analogWrite(11, 35);
     analogWrite(10, 255);
-    analogWrite(9, 40);
+    analogWrite(9, 46);
     delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 10);
-    analogWrite(10, 50);
+    analogWrite(11, 19);
+    analogWrite(10, 54);
     analogWrite(9, 255);
-    delay(1000); // wait 1000 milliseconds
-    analogWrite(11, 0);
-    analogWrite(10, 0);
-    analogWrite(9, 0);
     delay(1000); // wait 1000 milliseconds
     analogWrite(11, 1);
     analogWrite(10, 5);
@@ -66,6 +62,10 @@ void loop() {
     analogWrite(11, 230);
     analogWrite(10, 115);
     analogWrite(9, 176);
+    delay(1000); // wait 1000 milliseconds
+    analogWrite(11, 66);
+    analogWrite(10, 99);
+    analogWrite(9, 102);
   }
 
 }
