@@ -11,9 +11,9 @@ the object will get closer and then will show the lights
 
 int distanceThreshold = 0;
 int cm = 0;
-int inches = 0;
+int inches = 0
   
-long readUltrasonicDistance(int triggerPin, int echoPin)
+  long readUltrasonicDistance(int triggerPin, int echoPin)
 {
   pinMode(triggerPin, OUTPUT);  // Clear the trigger
   digitalWrite(triggerPin, LOW);
@@ -42,7 +42,12 @@ void loop()
   distanceThreshold = 350;
   // measure the ping time in cm
   cm = 0.01723 * readUltrasonicDistance(7, 6);
+<<<<<<< HEAD
   // convert to inches by dividing by 2.54
+=======
+  Arduino: 1.8.9 (Linux), Board: "Arduino/Genuino Uno"
+// convert to inches by dividing by 2.54
+>>>>>>> acc2fea007876f5bb2f3c844a8b93d05c3b67cd8
   inches = (cm / 2.54);
   Serial.print(cm);
   Serial.print("cm, ");
@@ -75,3 +80,4 @@ void loop()
   }
   delay(100); // Wait for 100 millisecond(s)
 }
+
