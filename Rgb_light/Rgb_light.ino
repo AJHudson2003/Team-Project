@@ -42,6 +42,13 @@ void loop()
   distanceThreshold = 350;
   // measure the ping time in cm
   cm = 0.01723 * readUltrasonicDistance(7, 6);
+  Arduino: 1.8.9 (Linux), Board: "Arduino/Genuino Uno"
+// convert to inches by dividing by 2.54
+  inches = (cm / 2.54);
+  Serial.print(cm);
+  Serial.print("cm, ");
+  Serial.print(inches);
+  Serial.println("in");
   if (cm > distanceThreshold) {
     digitalWrite(2, LOW);
     digitalWrite(3, LOW);
