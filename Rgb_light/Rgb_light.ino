@@ -11,9 +11,9 @@ the object will get closer and then will show the lights
 
 int distanceThreshold = 0;
 int cm = 0;
-int inches = 0;
+int inches = 0
   
-long readUltrasonicDistance(int triggerPin, int echoPin)
+  long readUltrasonicDistance(int triggerPin, int echoPin)
 {
   pinMode(triggerPin, OUTPUT);  // Clear the trigger
   digitalWrite(triggerPin, LOW);
@@ -69,3 +69,4 @@ void loop()
   }
   delay(100); // Wait for 100 millisecond(s)
 }
+
